@@ -280,4 +280,8 @@ footer > div {
   .slide-info p {
     font-size: 12px;
   }
+
+  .counter {
+    padding: 1em;
+  }
 }
