@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "Lexa";
+  src: url("/font/Lexa.woff2") format("woff2"),
+    url("/font/Lexa.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-bg: #2a2c29;
+  --color-accent: #5d6c6a;
+  --color-text: #a7a597;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Lexa", sans-serif;
+  background-color: var(--color-bg);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 4em;
+  color: var(--color-accent);
+}
+
+.logo h1 {
+  font-family: "Lexa";
+  font-size: 80px;
+  color: var(--color-accent);
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+a {
+  position: relative;
+  background: none;
+  outline: none;
+  border: 1px solid var(--color-text);
+  border-radius: 0.25em;
+  font-size: 17px;
+  color: var(--color-text);
+  font-family: "Kanit", sans-serif;
+  padding: 0.25em 0.75em;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 300ms;
+  z-index: 100;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a span {
+  padding-right: 0.5em;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-text);
+  z-index: -1;
+  transition: all 300ms;
+}
+
+a:hover {
+  color: var(--color-bg);
+}
+
+a:hover:after {
+  width: 100%;
+}
+
+.sub-nav {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text);
+  width: 100%;
+  padding: 4em 4em;
+}
+
+.sub-nav p:nth-child(1) {
+  width: 40%;
+  font-family: "Kanit", sans-serif;
+  padding-left: 10%;
+  line-height: 1.2;
+}
+
+p.primary {
+  font-size: 40px;
+  text-align: right;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2em 4em 2em 4em;
+  display: flex;
+}
+
+footer > div {
+  flex: 1;
+}
+
+.slide-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.slide-info > div {
+  flex: 1;
+}
+
+.slide-name p {
+  font-size: 42px;
+  font-family: "Lexa", sans-serif;
+  padding: 0.5em 0 0 0;
+}
+
+.year p:nth-child(1),
+.role p:nth-child(1),
+.agency p:nth-child(1),
+.awards p:nth-child(1) {
+  margin-bottom: 1em;
+  font-family: "Lexa", sans-serif;
+}
+
+.hero-img {
+  position: absolute;
+  right: 0em;
+  bottom: 35%;
+  width: 90%;
+  max-width: 600px;
+  height: 200px;
+}
+
+.mask {
+  position: absolute;
+  width: 90%;
+  max-width: 600px;
+  height: 200px;
+  background: url("https://images.unsplash.com/photo-1513943517251-aa4a9e64ed24?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  z-index: 1000;
+}
+
+.counter {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: 40px;
+  font-family: "Lexa";
+  padding: 2em;
+}
+
+.mask:nth-child(1) {
+  clip-path: polygon(0% 0, 0% 0, 0% 100%, 0% 100%);
+}
+
+.mask:nth-child(2) {
+  clip-path: polygon(10% 0, 10% 0, 10% 100%, 10% 100%);
+}
+
+.mask:nth-child(3) {
+  clip-path: polygon(20% 0, 20% 0, 20% 100%, 20% 100%);
+}
+
+.mask:nth-child(4) {
+  clip-path: polygon(30% 0, 30% 0, 30% 100%, 30% 100%);
+}
+
+.mask:nth-child(5) {
+  clip-path: polygon(40% 0, 40% 0, 40% 100%, 40% 100%);
+}
+
+.mask:nth-child(6) {
+  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+}
+
+.mask:nth-child(7) {
+  clip-path: polygon(60% 0, 60% 0, 60% 100%, 60% 100%);
+}
+
+.mask:nth-child(8) {
+  clip-path: polygon(70% 0, 70% 0, 70% 100%, 70% 100%);
+}
+
+.mask:nth-child(9) {
+  clip-path: polygon(80% 0, 80% 0, 80% 100%, 80% 100%);
+}
+.mask:nth-child(10) {
+  clip-path: polygon(90% 0, 90% 0, 90% 100%, 90% 100%);
+}
+
+@media (max-width: 900px) {
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  nav,
+  footer {
+    padding: 2em 1em;
+  }
+
+  .sub-nav {
+    right: 0;
+    width: 100%;
+  }
+
+  p.intro {
+    display: none;
+  }
+
+  .slide-name p {
+    font-size: 24px;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  .awards,
+  .agency {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .year p:nth-child(1),
+  .role p:nth-child(1),
+  .agency p:nth-child(1),
+  .awards p:nth-child(1) {
+    margin-bottom: 0.5em;
+    font-size: 14px;
+  }
+
+  .slide-info p {
+    font-size: 12px;
+  }
+}
